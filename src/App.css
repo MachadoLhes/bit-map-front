@@ -1,18 +1,12 @@
 .App {
-  display: flex;
   flex-direction: row;
   background-color: #EAEAEA;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .header {
   align-items: center;
   background-color: white;
-  min-width: 85vw;
+  min-width: 85%;
   height: 20px;
   padding: 20px;
   margin-bottom: 2px;
@@ -32,9 +26,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
-  padding-left: 16px;
   min-height: 100vh;
-  min-width: 15vw;
+  min-width: 20%;
   background-color: #595858;
   color: white;
   font-weight: bold;
@@ -51,7 +44,7 @@
   align-items: center;
   background-color: white;
   height: 80px;;
-  min-width: 85vw;
+  min-width: 85%;
   padding: 20px;
   margin-bottom: 2px;
   color: white;
@@ -61,7 +54,7 @@
   align-items: center;
   background-color: white;
   height: 70vh;;
-  min-width: 85vw;
+  min-width: 85%;
   padding: 20px;
   margin-bottom: 2px;
   color: white;
@@ -70,6 +63,28 @@
 h3 {
   margin: 0;
   color: #1AB394;
+}
+
+
+.menu {
+  min-width: 12%;
+}
+
+.menu-item {
+}
+
+.menu-item-selected {
+  background-color: white;
+  color: #1AB394;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.content {
+  width: 80%;
 }
 
 @keyframes App-logo-spin {
