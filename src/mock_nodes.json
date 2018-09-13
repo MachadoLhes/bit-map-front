@@ -1,0 +1,54 @@
+[{
+    
+        "id": "1",
+        "name": "Produto",
+        "version": "v1",
+        "group": "b2w",
+        "cpu": 0.5,
+        "memory": "512",
+        "deploy_user": "Rodrigo",
+        "last_deploy": "2018-08-12",
+        "owner": "Marins",
+        "team": "Front",
+        "status": "200",
+        "raml_uri": "raml.com",
+        "new_relic": "new-relic.com",
+        "ambiente_deploy": "glete",
+        "uri": "ww."
+    },
+    {
+        "id": "2",
+        "name": "Sigma",
+        "version": "v1",
+        "group": "b2w",
+        "cpu": 0.5,
+        "memory": "512",
+        "deploy_user": "Rodrigo",
+        "last_deploy": "2018-08-12",
+        "owner": "Marins",
+        "team": "Front",
+        "status": "200",
+        "raml_uri": "raml.com",
+        "new_relic": "new-relic.com",
+        "ambiente_deploy": "glete",
+        "uri": "ww."
+    },
+    {
+        "id": "3",
+        "name": "Frete",
+        "version": "v1",
+        "group": "b2w",
+        "cpu": 0.5,
+        "memory": "512",
+        "deploy_user": "Rodrigo",
+        "last_deploy": "2018-08-12",
+        "owner": "Marins",
+        "team": "Front",
+        "status": "200",
+        "raml_uri": "raml.com",
+        "new_relic": "new-relic.com",
+        "ambiente_deploy": "glete",
+        "uri": "ww."
+    }
+    
+]
