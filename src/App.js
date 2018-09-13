@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Graph } from 'react-d3-graph';
-import { Container, Row, Col } from 'reactstrap';
-import Body from "./components/Body";
 import SideBar from './components/SideBar';
+import Americanas from "./pages/Americanas";
+import Atlas from "./pages/Atlas";
 
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <SideBar />
-        <Body />
-
+      <SideBar />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Americanas} />
+          <Route path="/atlas" component={Atlas} />
+        </Switch>
+      </Router>
       </div>
     );
   }
