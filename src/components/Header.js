@@ -1,10 +1,9 @@
 import React from "react";
 
 const Header = props => {
-  const commit = props.commit || null;
   return (
     <div className="header">
-
+			<h3>{props.pageTitle}</h3>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .App {
   display: flex;
   flex-direction: row;
+  background-color: aqua;
 }
 
 .App-logo {
@@ -9,10 +10,12 @@
 }
 
 .header {
+  align-items: center;
   background-color: #222;
   min-width: 85vw;
-  height: 150px;
+  height: 20px;
   padding: 20px;
+  margin-bottom: 2px;
   color: white;
 }
 
@@ -44,8 +47,22 @@
   height: 120px;
 }
 
+.filter {
+  align-items: center;
+  background-color: #222;
+  height: 80px;;
+  min-width: 85vw;
+  padding: 20px;
+  margin-bottom: 2px;
+  color: white;
+}
+
 .body {
   
+}
+
+h3 {
+  margin: 0;
 }
 
 @keyframes App-logo-spin {
