@@ -1,10 +1,10 @@
 [
     {
-        "source": "Produto",
-        "target": "Sigma"
+        "source": "1",
+        "target": "2"
     },
     {
-        "source": "Produto",
-        "target": "Frete"
+        "source": "1",
+        "target": "3"
     }
 ]

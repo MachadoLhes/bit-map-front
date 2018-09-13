@@ -6,7 +6,7 @@ import mock_relations from './mock_relations.json';
 
 const getNodes = function() {
   return mock_nodes.map(node => {
-    return {'id': node.name}
+    return {'id': node.id, 'name': node.name}
   })
 };
 
@@ -26,9 +26,12 @@ const data = {
 const myConfig = {
   nodeHighlightBehavior: true,
   node: {
-      color: 'red',
+      color: 'gray',
       size: 1000,
-      highlightStrokeColor: 'blue'
+      highlightStrokeColor: 'blue',
+      symbolType: 'square',
+      fontSize: 16,
+      labelProperty: 'name',
   },
   link: {
       highlightColor: 'lightblue'
