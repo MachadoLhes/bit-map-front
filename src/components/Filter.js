@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import DeployDropdown from "./Dropdown/DeployDropdown";
 import OwnerDropdown from "./Dropdown/OwnerDropdown";
 import TeamDropdown from "./Dropdown/Team";

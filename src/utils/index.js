@@ -1,21 +1,21 @@
 import mock_nodes from '../mock_nodes.json';
 import mock_relations from '../mock_relations.json';
+import axios from "axios";
 
-export const getNodes = function() {
-	return mock_nodes.map(node => {
-		return {'id': node.id, 'name': node.name}
-	})
-};
-  
-export const getLinks = function() {
-	return mock_relations.map(relation => {
-		return {'source': relation.source, 'target': relation.target}
-	})
-};
-
-export const data = {
-	nodes: getNodes(),
-	links: getLinks()
+export const getNodes = async function() {
+	const nodeResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/app').then(res => {
+		const nodes = res.data;
+		return nodes.map(node => {
+			return { 'id': node.id }
+		})})
+	const linkResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/relation').then(res => {
+		const relations = res.data;
+		return relations.map(relation => {
+			return { 'source': relation.source, 'target': relation.target }
+		})})
+	
+	return { 'nodes': nodeResponse, 'links': linkResponse }
+	
 };
 
 // the graph configuration, you only need to pass down properties
