@@ -136,6 +136,39 @@ h4:active {
   margin-right: 16px;
 }
 
+.card {
+  background-color: #DCDCDC !important;
+  
+  width: 300px !important;
+}
+
+.card-title {
+  background-color: #1AB394;
+  padding: 20px;
+}
+
+.card-body {
+  color: black;
+}
+
+.card-item {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgrey;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+
+}
+
+p {
+  margin: 0px !important;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
