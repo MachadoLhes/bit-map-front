@@ -1,33 +1,15 @@
-import React from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React from 'react'
+import { Dropdown } from 'semantic-ui-react'
 
-export default class StatusDropdown extends React.Component {
-  constructor(props) {
-    super(props);
+// const teams = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/teams').then(res => {
+// 		const nodes = res.data;
+// 		return nodes.map(node => {
+// 			return { 'id': node.id, 'name':node.name }
+// 		})})
+const stateOptions = [ { key: 'H', value: 'H', text: 'Healthy' }, { key: 'U', value: 'U', text: 'Unhealthy' }]
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
+const Status = () => (
+  <Dropdown placeholder='Status' search selection options={stateOptions} />
+)
 
-  toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
-  }
-
-  render() {
-    return (
-        <Dropdown className="dropdown" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle caret>
-                Status
-            </DropdownToggle>
-            <DropdownMenu>
-                <DropdownItem>Healthy</DropdownItem>
-                <DropdownItem>Unhealthy</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    );
-  }
-}
+export default Status

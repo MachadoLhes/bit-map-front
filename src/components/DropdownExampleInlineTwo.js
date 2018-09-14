@@ -1,40 +1,15 @@
 import React from 'react'
-import { Dropdown, Header, Icon } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
 
-const options = [
-  {
-    key: 'today',
-    text: 'today',
-    value: 'today',
-    content: 'Today',
-  },
-  {
-    key: 'this week',
-    text: 'this week',
-    value: 'this week',
-    content: 'This Week',
-  },
-  {
-    key: 'this month',
-    text: 'this month',
-    value: 'this month',
-    content: 'This Month',
-  },
-]
+// const teams = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/teams').then(res => {
+// 		const nodes = res.data;
+// 		return nodes.map(node => {
+// 			return { 'id': node.id, 'name':node.name }
+// 		})})
+const stateOptions = [ { key: 'PRC', value: 'PRC', text: 'Pricing' }, { key: 'PROD', value: 'PROD', text: 'Product' }]
 
-const DropdownExampleInlineTwo = () => (
-  <Header as='h4'>
-    <Icon name='trophy' />
-    <Header.Content>
-      Trending repos{' '}
-      <Dropdown
-        inline
-        header='Adjust time span'
-        options={options}
-        defaultValue={options[0].value}
-      />
-    </Header.Content>
-  </Header>
+const DropdownExampleSearchSelectionTwo = () => (
+  <Dropdown placeholder='Time' search selection options={stateOptions} />
 )
 
-export default DropdownExampleInlineTwo
+export default DropdownExampleSearchSelectionTwo

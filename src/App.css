@@ -71,10 +71,6 @@ h3 {
   font-weight: 600 !important;
 }
 
-h4 {
-  margin: 0;
-}
-
 .menu {
   width: 100%;
 }
@@ -106,8 +102,14 @@ h4 {
 }
 
 h2 {
-  padding: 15px;
-  padding-left: 40px;
+  font-size: 1.5rem !important;
+  padding: 15px !important;
+  padding-left: 40px !important;
+}
+
+h4 {
+  margin: 0 !important;
+  font-size: 1.2rem !important;
 }
 
 h4:link {
@@ -132,6 +134,47 @@ h4:active {
 
 .dropdown {
   margin-right: 16px;
+}
+
+.card {
+  background-color: #DCDCDC !important;
+  
+  width: 300px !important;
+}
+
+.card-title {
+  background-color: #1AB394;
+  padding: 20px;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  color: black;
+}
+
+.card-item {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgrey;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+
+}
+
+p {
+  margin: 0px !important;
+}
+
+.custom-search {
+  display: flex !important;
+  flex: 1 !important;
+  justify-content: flex-end !important;
 }
 
 @keyframes App-logo-spin {

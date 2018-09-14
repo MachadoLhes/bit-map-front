@@ -1,34 +1,36 @@
-import React from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React from 'react'
+import { Dropdown } from 'semantic-ui-react'
+import axios from 'axios'
+import { getTeams } from "../../utils"
 
-export default class TeamDropdown extends React.Component {
-  constructor(props) {
-    super(props);
+// const stateOptions = [ { key: 'PRC', value: 'PRC', text: 'Pricing' }, { key: 'PROD', value: 'PROD', text: 'Product' }]
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
+
+
+class Team extends React.Component {
+
+  state = {}
+
+  componentDidMount() {
+    getTeams().then(res => {
+      this.setState({ teams: res })
+    })
   }
 
-  toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
+  handleChange = (e, { value }) => {
+    this.props.updateFilter({ team: value })
   }
+
 
   render() {
     return (
-        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle caret>
-                Time
-            </DropdownToggle>
-            <DropdownMenu>
-                <DropdownItem>Checkout</DropdownItem>
-                <DropdownItem>Pricing</DropdownItem>
-                <DropdownItem>Product</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    );
+      <Dropdown placeholder='Time'
+        onChange={this.handleChange}
+        search
+        selection
+        options={this.state.teams} />
+    )
   }
-}
+};
+
+export default Team;

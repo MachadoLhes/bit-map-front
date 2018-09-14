@@ -1,34 +1,36 @@
-import React from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React from 'react'
+import { Dropdown } from 'semantic-ui-react'
+import { getOwners } from "../../utils"
 
-export default class OwnerDropdown extends React.Component {
-  constructor(props) {
-    super(props);
+// const teams =  axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/teams').then(res => {
+// 		const nodes = res.data;
+// 		return nodes.map(node => {
+// 			return { 'id': node.id, 'name':node.name }
+// 		})})
+// const stateOptions = [{ key: 'eu', value: 'eu', text: 'Eu' }, { key: 'vc', value: 'vc', text: 'Você' }, { key: 'ZB', value: 'ZB', text: 'Zoobomafoo' }]
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
+class Owner extends React.Component {
+  state = {}
+
+  componentDidMount() {
+    getOwners().then(res => {
+      this.setState({ owners: res })
+    })
   }
 
-  toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
+  handleChange = (e, { value }) => {
+    this.props.updateFilter({ owners: value })
   }
 
   render() {
     return (
-        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle caret>
-                Responsável
-            </DropdownToggle>
-            <DropdownMenu>
-                <DropdownItem>Eu</DropdownItem>
-                <DropdownItem>Você</DropdownItem>
-                <DropdownItem>Zoobomafoo</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    );
+      <Dropdown placeholder='Responsavel'
+        onChange={this.handleChange}
+        search
+        selection
+        options={this.state.owners} />
+    )
   }
 }
+
+export default Owner
