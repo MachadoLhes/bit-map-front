@@ -1,15 +1,36 @@
 import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
+import axios from 'axios'
+import {getTeams} from "../../utils"
 
-// const teams = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/teams').then(res => {
-// 		const nodes = res.data;
-// 		return nodes.map(node => {
-// 			return { 'id': node.id, 'name':node.name }
-// 		})})
-const stateOptions = [ { key: 'PRC', value: 'PRC', text: 'Pricing' }, { key: 'PROD', value: 'PROD', text: 'Product' }]
+// const stateOptions = [ { key: 'PRC', value: 'PRC', text: 'Pricing' }, { key: 'PROD', value: 'PROD', text: 'Product' }]
 
-const Team = () => (
-  <Dropdown placeholder='Time' search selection options={stateOptions} />
-)
 
-export default Team
+
+class Team extends React.Component {
+  state = {
+  }
+
+  componentDidMount() {
+    getTeams().then(res => {
+        this.setState({teams: res})
+    })
+  }
+
+  handleChange = (e, { value }) => this.setState({ "filters": {
+    "team": value
+  } })
+
+
+  render() {
+    return(
+        <Dropdown placeholder='Time'
+        onChange={this.handleChange}
+        search 
+        selection 
+        options={this.state.teams} />
+    )
+  }
+};
+
+export default Team;

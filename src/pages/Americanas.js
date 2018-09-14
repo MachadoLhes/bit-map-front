@@ -12,7 +12,7 @@ class Americanas extends Component {
                 <SideBar />
                 <div className="content">
                     <Header pageTitle="Americanas" />
-                    <Filter />
+                    <Filter/>
                     <GraphContainer />
                 </div>
             </div>
