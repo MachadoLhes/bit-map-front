@@ -10,7 +10,10 @@ class GraphContainer extends Component {
   }
 
   onClickNode(nodeNumber) {
-      this.setState({shouldDisplayInfoBox: true})
+      let node = this.state.graph.nodes
+      node = node.find(x => x.id === nodeNumber)
+      this.setState({shouldDisplayInfoBox: true, selectedNode: node})
+      console.log(node)
   }
 
   componentDidMount() {

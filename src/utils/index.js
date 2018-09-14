@@ -6,7 +6,7 @@ export const getNodes = async function() {
 	const nodeResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/app').then(res => {
 		const nodes = res.data;
 		return nodes.map(node => {
-			return { 'id': node.id }
+			return { 'id': node.id, 'name':node.name }
 		})})
 	const linkResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/relation').then(res => {
 		const relations = res.data;
@@ -28,7 +28,7 @@ export const myConfig = {
 		color: 'gray',
 		size: 1000,
 		highlightStrokeColor: 'blue',
-		symbolType: 'diamond',
+		symbolType: 'circle',
 		fontSize: 16,
 		labelProperty: 'name',
 	},
