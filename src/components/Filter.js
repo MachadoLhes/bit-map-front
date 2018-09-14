@@ -6,13 +6,12 @@ import StatusDropdown from "./Dropdown/Status";
 import DropdownExampleSearchSelectionTwo from "./DropdownExampleInlineTwo";
 
 class Filter extends Component {
-	
 	render() {
 		return (
 			<div className="filter">
 				<DeployDropdown />
 				<OwnerDropdown />
-				<TeamDropdown />
+				<TeamDropdown updateFilter={this.props.updateFilter} />
 				<StatusDropdown />
 
 			</div>
