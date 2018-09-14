@@ -22,6 +22,8 @@ export const data = {
 // that you want to override, otherwise default ones will be used
 export const myConfig = {
 	nodeHighlightBehavior: true,
+	width: 800,
+	height: 550,
 	node: {
 		color: 'gray',
 		size: 1000,

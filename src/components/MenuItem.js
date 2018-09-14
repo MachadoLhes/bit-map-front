@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const MenuItem = props => {
 	return (
 		<div className="menu-item">
-		<Link to={props.path}>
-			<h4>{props.item}</h4>
-		</Link>
+			<Link className="menu-item-text" to={props.path}>
+				<h4>{props.item}</h4>
+			</Link>
 		</div>
 	);
 };
