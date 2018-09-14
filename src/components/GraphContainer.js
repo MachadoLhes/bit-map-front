@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Graph } from "react-d3-graph";
 import { getNodes, onClickNode, onMouseOverNode, myConfig, data, onClickLink, onMouseOverLink, onMouseOutLink, onMouseOutNode } from "../utils"
 import renderIf from 'render-if'
+import CustomInput from "./CustomInput";
 
 class GraphContainer extends Component {
     state = {
@@ -55,7 +56,10 @@ class GraphContainer extends Component {
                                         <p>Raml_uri: {this.state.selectedNode.raml_uri}</p>
                                         <p>New_relic: {this.state.selectedNode.new_relic}</p>
                                         <p>Ambiente_deploy: {this.state.selectedNode.ambiente_deploy}</p>
-                                        <p>uri: {this.state.selectedNode.uri}</p>
+                                        <p>
+                                            uri: {this.state.selectedNode.uri}
+                                            <CustomInput />
+                                        </p>
                                     </div>
                                 </div>
                             </div>) : null}

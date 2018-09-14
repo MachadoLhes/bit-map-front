@@ -1,8 +1,4 @@
-import mock_nodes from '../mock_nodes.json';
-import mock_relations from '../mock_relations.json';
 import axios from "axios";
-
-
 
 const getAppUri = function () {
 
