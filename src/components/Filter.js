@@ -4,8 +4,10 @@ import OwnerDropdown from "./Dropdown/OwnerDropdown";
 import TeamDropdown from "./Dropdown/Team";
 import StatusDropdown from "./Dropdown/Status";
 import DropdownExampleSearchSelectionTwo from "./DropdownExampleInlineTwo";
+import CustomSearch from "./CustomSearch";
 
 class Filter extends Component {
+
 	render() {
 		return (
 			<div className="filter">
@@ -14,6 +16,9 @@ class Filter extends Component {
 				<TeamDropdown updateFilter={this.props.updateFilter} />
 				<StatusDropdown />
 
+				<div className="custom-search" >
+					<CustomSearch />
+				</div>
 			</div>
 		);
 	}
