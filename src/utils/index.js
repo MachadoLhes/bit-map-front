@@ -4,10 +4,8 @@ import axios from "axios";
 
 export const getNodes = async function() {
 	const nodeResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/app').then(res => {
-		const nodes = res.data;
-		return nodes.map(node => {
-			return { 'id': node.id, 'name':node.name }
-		})})
+		return res.data;
+	})
 	const linkResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/relation').then(res => {
 		const relations = res.data;
 		return relations.map(relation => {
