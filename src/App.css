@@ -145,6 +145,8 @@ h4:active {
 .card-title {
   background-color: #1AB394;
   padding: 20px;
+  font-weight: 800;
+  font-size: 1.1rem;
 }
 
 .card-body {
@@ -167,6 +169,12 @@ h4:active {
 
 p {
   margin: 0px !important;
+}
+
+.custom-search {
+  display: flex !important;
+  flex: 1 !important;
+  justify-content: flex-end !important;
 }
 
 @keyframes App-logo-spin {
