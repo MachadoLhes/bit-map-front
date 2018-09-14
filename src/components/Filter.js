@@ -11,10 +11,10 @@ class Filter extends Component {
 	render() {
 		return (
 			<div className="filter">
-				<DeployDropdown />
-				<OwnerDropdown />
+				<DeployDropdown updateFilter={this.props.updateFilter} />
+				<OwnerDropdown updateFilter={this.props.updateFilter} />
 				<TeamDropdown updateFilter={this.props.updateFilter} />
-				<StatusDropdown />
+				<StatusDropdown updateFilter={this.props.updateFilter} />
 
 				<div className="custom-search" >
 					<CustomSearch />

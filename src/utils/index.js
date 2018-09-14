@@ -13,12 +13,30 @@ export const getTeams = async function () {
 	return teams
 };
 
+export const getOwners = async function () {
+	const owners = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/owner').then(res => {
+		return res.data.map(node => {
+			return { text: node, key: node, value: node }
+		})
+	})
+	return owners
+};
+
+
 export const getNodes = async function (filters) {
 	let query_params = ''
 	if (filters) {
-		query_params = '?team=' + filters.team
+		console.log(filters)
+		query_params = '?'
+		if (filters.team) {
+			query_params += 'team=' + filters.team + "&"
+		}
+		if (filters.owners) {
+			query_params += 'owner=' + filters.owners + "&"
+		}
 		console.log(query_params)
 	}
+	console.log(query_params)
 
 	const nodeResponse = await axios.get('http://ec2-18-207-164-75.compute-1.amazonaws.com:8080/app' + query_params).then(res => {
 		console.log(res.data)

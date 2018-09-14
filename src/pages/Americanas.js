@@ -25,18 +25,16 @@ class Americanas extends Component {
     }
 
     updateNodes(filters) {
-        if (filters.team) {
-            getNodes(filters).then(res => {
-                this.setState({ graph: res })
-            })
-            console.log("AQUI tem gente")
-        } else {
-            getNodes(false).then(res => {
-                this.setState({ graph: res })
-            })
-            console.log("AQUI TA VAZIA")
-        }
-
+        // if (filters.team && filters.state) {
+        //     console.log("Entrou")
+        getNodes(filters).then(res => {
+            this.setState({ graph: res })
+        })
+        // } else {
+        // getNodes(false).then(res => {
+        // this.setState({ graph: res })
+        // })
+        // }
     }
 
     render() {

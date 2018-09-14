@@ -9,8 +9,7 @@ import { getTeams } from "../../utils"
 
 class Team extends React.Component {
 
-  state = {
-  }
+  state = {}
 
   componentDidMount() {
     getTeams().then(res => {
