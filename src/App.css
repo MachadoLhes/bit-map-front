@@ -81,10 +81,10 @@ h3 {
 }
 
 .menu-item-selected {
-  padding: 15px;
-  padding-left: 30px;
-  background-color: white;
-  color: #1AB394;
+  padding: 15px !important;
+  padding-left: 30px !important;
+  background-color: white !important;
+  color: #1AB394 !important;
 }
 
 .page-wrapper {
@@ -98,6 +98,11 @@ h3 {
 
 .menu-item-text {
   color: white;
+  text-decoration: none;
+}
+
+.menu-item-text:onclick {
+  color: black;
   text-decoration: none;
 }
 
@@ -138,7 +143,7 @@ h4:active {
 
 .card {
   background-color: #DCDCDC !important;
-  
+  border-radius: 2% !important;
   width: 300px !important;
 }
 
@@ -154,12 +159,16 @@ h4:active {
 }
 
 .card-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: lightgrey;
 }
 
 .graph-container {
+  height: 79vh;
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -175,6 +184,29 @@ p {
   display: flex !important;
   flex: 1 !important;
   justify-content: flex-end !important;
+}
+
+input {
+  display: flex;
+  flex: 1;
+  background-color: #595858;
+}
+
+.ui.input>input {
+  padding: 0px !important;
+  display: flex !important;
+  flex: 1 !important;
+}
+
+.ui.input {
+  font-size: 1em;
+  display: flex;
+  flex: 1;
+  margin-left: 2px;
+}
+
+.input-color {
+  background-color: gray !important;
 }
 
 @keyframes App-logo-spin {
