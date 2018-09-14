@@ -103,8 +103,8 @@ h3 {
 
 h2 {
   font-size: 1.5rem !important;
-  padding: 15px;
-  padding-left: 40px;
+  padding: 15px !important;
+  padding-left: 40px !important;
 }
 
 h4 {
