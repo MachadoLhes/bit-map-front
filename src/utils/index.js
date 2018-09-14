@@ -28,7 +28,7 @@ export const myConfig = {
 		color: 'gray',
 		size: 1000,
 		highlightStrokeColor: 'blue',
-		symbolType: 'square',
+		symbolType: 'diamond',
 		fontSize: 16,
 		labelProperty: 'name',
 	},
